@@ -59,6 +59,10 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
+  #Setup config for production in heroku
+  config.middleware.use ChatActionCable  
+  config.web_socket_server_url = "wss:enigmatic-eyrie-83332.herokuapp.com/"
+
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "Chat_#{Rails.env}"
