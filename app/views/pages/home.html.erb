@@ -1,9 +1,5 @@
 <div class="jumbotron">
-	<h1 style="text-align: center">Rails Chat</h1>
-	<p style="text-align: center; font-size: 0.8em;">
-		Very quick rails application that utilizes ActionCable to make use of WebSockets for real time chatting!
-		Be sure to check out the <%= link_to "GitHub", "https://github.com/christianteller/chat" %>; feedback is appreciated.
-	</p>
+	<h1 style="text-align: center"> Chat</h1>
 	<div class="well" id="chatbox" style="height: 250px; border: 1px solid black; overflow-y: scroll;">
 		<% @messages.each do |message| %>
 			<%= render 'messages/message', message: message %>
